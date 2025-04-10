@@ -3,28 +3,40 @@ import type { Education } from '../types';
 
 export const items: Array<Education> = [
 	{
-		degree: 'Bachelor degree of Computer Science',
+		degree: 'Diplôme d’ingénieur en alternance',
 		description: '',
-		location: 'Tunisia',
-		logo: Assets.Unknown,
+		location: 'Nancy, Grand Est, France',
+		logo: Assets.TelecomNancy,
 		name: '',
-		organization: 'ISTIC',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) },
+		organization: 'Telecom Nancy',
+		period: { from: new Date(2022, 9, 1), to: new Date(2025, 8, 30) },
 		shortDescription: '',
 		slug: 'dummy-education-item',
 		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
 	},
 	{
-		degree: 'PhD of Computer Science',
+		degree: 'Semestre d\'échange au Cegep de Matane',
 		description: '',
-		location: 'USA',
-		logo: Assets.Unknown,
+		location: 'Matane, Québec, Canada',
+		logo: Assets.CegepMatane,
 		name: '',
-		organization: 'MIT',
-		period: { from: new Date(2023, 0, 1) },
+		organization: 'Cegep de Matane',
+		period: { from: new Date(2022, 1, 20), to: new Date(2022, 6, 20) },
 		shortDescription: '',
 		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'Rust', 'Computer Architecture', 'Algorithms and Data structures']
+		subjects: ['Assembly', 'C', 'Python', 'Algorithms and Data structures']
+	},
+	{
+		degree: 'DUT Informatique',
+		description: '',
+		location: 'Saint-Dié-des-Vosges, Grand Est, France',
+		logo: Assets.IUT,
+		name: '',
+		organization: 'Université de Lorraine',
+		period: { from: new Date(2020, 9, 1), to: new Date(2022, 8, 30) },
+		shortDescription: '',
+		slug: 'dummy-education-item-3',
+		subjects: ['Assembly', 'C', 'Python', 'Algorithms and Data structures']
 	}
 ];
 

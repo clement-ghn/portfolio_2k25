@@ -70,7 +70,11 @@ const Assets = {
 	Jest: a('jest.png'),
 	Unocss: a('unocss.svg'),
 	Ruvy: a('ruvy.svg'),
-	Postcss: a('postcss.svg')
+	Postcss: a('postcss.svg'),
+	//Mes persos
+	TelecomNancy: a('tn.png'),
+	IUT: a('sddv.png'),
+	CegepMatane: a('cegep.png'),
 };
 
 export default Assets;

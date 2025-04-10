@@ -2,12 +2,10 @@ import type { Color } from './utils/colors';
 
 export enum Platform {
 	GitHub = 'github',
-	StackOverflow = 'stackoverflow',
 	Twitter = 'twitter',
 	Linkedin = 'linkedin',
 	Email = 'email',
-	Facebook = 'facebook',
-	Youtube = 'youtube'
+	Instagram = 'instagram',
 }
 
 export type Icon = `i-${string}-${string}`;
