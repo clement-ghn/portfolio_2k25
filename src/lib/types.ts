@@ -16,7 +16,7 @@ export enum ContractType {
 	SelfEmployed = 'Self-employed',
 	Freelance = 'Freelance',
 	Contract = 'Contract',
-	Internship = 'Internship',
+	Internship = 'Stage',
 	Alternance = 'Alternance'
 }
 

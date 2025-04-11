@@ -1,1 +1,1 @@
-export const title = 'Search';
+export const title = 'Rechercher';

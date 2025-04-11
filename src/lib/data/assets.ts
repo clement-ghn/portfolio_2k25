@@ -83,6 +83,12 @@ const Assets = {
 	Unity: a('unity.svg'),
 	TKinter: a('tkinter.jpeg'),
 	QMurs: a('4murs.png'),
+	PDesign: a('8p.png'),
+	Crowdkeep: a('crowdkeep.png'),
+	Shopify: a('shopify.png'),
+	Jquery: a('jquery.webp'),
+	Compta: a('compta.png'),
+	GestiondeProjet: a('gdp.svg'),
 };
 
 export default Assets;
