@@ -75,6 +75,14 @@ const Assets = {
 	TelecomNancy: a('tn.png'),
 	IUT: a('sddv.png'),
 	CegepMatane: a('cegep.png'),
+	Ruby: a('ruby.png'),
+	Matlab: a('matlab.png'),
+	RoR: a('rails.png'),
+	Spring: a('spring.png'),
+	AndroidStudio: a('androidstudio.png'),
+	Unity: a('unity.svg'),
+	TKinter: a('tkinter.jpeg'),
+	QMurs: a('4murs.png'),
 };
 
 export default Assets;

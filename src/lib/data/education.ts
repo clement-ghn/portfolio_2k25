@@ -12,7 +12,7 @@ export const items: Array<Education> = [
 		period: { from: new Date(2022, 9, 1), to: new Date(2025, 8, 30) },
 		shortDescription: '',
 		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
+		subjects: ['C', 'Algorithm', 'Python', 'Android Studio', 'Java', 'Anglais', 'Droit', 'Comptabilité', 'Matlab', 'Preuves de programmation', 'Réseaux', 'Gestion de projet', 'Bases de données NOSQL']
 	},
 	{
 		degree: 'Semestre d\'échange au Cegep de Matane',
@@ -24,7 +24,7 @@ export const items: Array<Education> = [
 		period: { from: new Date(2022, 1, 20), to: new Date(2022, 6, 20) },
 		shortDescription: '',
 		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'C', 'Python', 'Algorithms and Data structures']
+		subjects: ['Unity', 'C++', 'Python', 'Cybersécurité', 'Electron', 'Javascript', 'VR', 'Android Studio', 'AWS']
 	},
 	{
 		degree: 'DUT Informatique',
@@ -36,8 +36,8 @@ export const items: Array<Education> = [
 		period: { from: new Date(2020, 9, 1), to: new Date(2022, 8, 30) },
 		shortDescription: '',
 		slug: 'dummy-education-item-3',
-		subjects: ['Assembly', 'C', 'Python', 'Algorithms and Data structures']
+		subjects: ['Assembleur', 'C', 'Python', 'POO', 'Algorithmes et Structures de données', 'Java', 'Anglais', 'Réseaux', 'Gestion de projet', 'Bases de données SQL']
 	}
 ];
 
-export const title = 'Education';
+export const title = 'Formation';

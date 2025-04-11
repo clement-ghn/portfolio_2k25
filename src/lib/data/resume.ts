@@ -1,3 +1,3 @@
-export const data = '';
+export const data = '../../static/CV_2025.pdf';
 
-export const title = 'Resumé';
+export const title = 'CV';
