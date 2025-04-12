@@ -179,6 +179,95 @@ export const items = [
 		name: 'Gestion de Projet',
 		category: 'soft'
 	}),
+	defineSkill({
+		slug: 'java',
+		color: 'white',
+		description: '',
+		logo: Assets.Java,
+		name: 'Java',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'c',
+		color: 'blue',
+		description: '',
+		logo: Assets.C,
+		name: 'C',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'csharpe',
+		color: 'purple',
+		description: '',
+		logo: Assets.Csharp,
+		name: 'C#',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'androidstudio',
+		color: 'blue',
+		description: '',
+		logo: Assets.AndroidStudio,
+		name: 'Android Studio',
+		category: 'devtools'
+	}),
+	defineSkill({
+		slug: 'python',
+		color: 'yellow',
+		description: '',
+		logo: Assets.Python,
+		name: 'Python',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'numpy',
+		color: 'cyan',
+		description: '',
+		logo: Assets.Numpy,
+		name: 'Numpy',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'pandas',
+		color: 'white',
+		description: '',
+		logo: Assets.Pandas,
+		name: 'Pandas',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'flask',
+		color: 'black',
+		description: '',
+		logo: Assets.Flask,
+		name: 'Flask',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'tkinter',
+		color: 'blue',
+		description: '',
+		logo: Assets.TKinter,
+		name: 'Tkinter',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'aws',
+		color: 'orange',
+		description: '',
+		logo: Assets.AWS,
+		name: 'AWS',
+		category: 'devops'
+	}),
+
+	defineSkill({
+		slug: 'matlab',
+		color: 'blue',
+		description: '',
+		logo: Assets.Matlab,
+		name: 'Matlab',
+		category: 'pro-lang'
+	}),
 
 ] as const;
 

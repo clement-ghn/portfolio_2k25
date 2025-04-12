@@ -12,7 +12,7 @@
 				<Chip size={'1.25em'}>Télécharger</Chip>
 			</a>
 		{:else}
-			<Chip>Ooops! Pas encoe de CV.</Chip>
+			<Chip>Ooops! Pas encore de CV.</Chip>
 		{/if}
 	</div>
 </CommonPage>
