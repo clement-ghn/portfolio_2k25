@@ -89,6 +89,8 @@ const Assets = {
 	Jquery: a('jquery.webp'),
 	Compta: a('compta.png'),
 	GestiondeProjet: a('gdp.svg'),
+	Royan: a('royan.png'),
+	Tereva: a('logo_tereva.png'),
 };
 
 export default Assets;
