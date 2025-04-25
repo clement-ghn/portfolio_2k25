@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-const base = '/portfolio';
+const base = 'https://clement-ghn.github.io/portfolio_2k25/';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
