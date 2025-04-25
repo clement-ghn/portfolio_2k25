@@ -16,6 +16,13 @@
 		{/if}
 	</div>
 </CommonPage>
+<footer class="text-center text-sm text-[var(--tertiary-text)] mt-10 p-4">
+	<p>
+		Template par <a href="https://github.com/RiadhAdrani" target="_blank" rel="noreferrer" class="text-[var(--accent-text)] underline">
+			Riadh Adrani
+		</a>
+	</p>
+</footer>
 
 <style lang="scss">
 	.resume {

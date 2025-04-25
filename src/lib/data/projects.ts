@@ -96,6 +96,164 @@ export const items: Array<Project> = [
 				src: '/projets/TL5.png'
 			}
 		]
+	},
+
+	{
+		slug: 'modele-sim',
+		color: '#e9e9e9',
+		description:
+			'Simulation de modèle SIR : un outil pour visualiser les épidémies. Un projet de simulation de modèle SIR pour visualiser la propagation des épidémies.',
+		shortDescription:
+			'Simulation de modèle SIR : un outil pour visualiser les épidémies. Un projet de simulation de modèle SIR pour visualiser la propagation des épidémies.',
+		links: [{ to: 'https://github.com/clement-ghn/m3202-SIR-sim', label: 'GitHub' }],
+		logo: Assets.Java,
+		name: 'Modèle SIR',
+		period: {
+			from: new Date(2021, 11, 15),
+			to: new Date(2022, 3, 15)
+		},
+		skills: getSkills('java'),
+		type: 'Java Application',
+		screenshots: [
+			{
+				label: 'Modele SIR',
+				src: '/projets/sim1.png'
+			},
+			{
+				label: 'Modele SIR',
+				src: '/projets/sim2.png'
+			}
+		]
+	},
+
+	{
+		slug: 'keep-the-peach',
+		color: '#e9be85',
+		description:
+			'Application d\'entrainements physique',
+		shortDescription:
+			'Application d\'entrainements physique',
+		links: [{ to: 'https://github.com/cegepmatane/projet-specialise-2022-clement-ghn?tab=readme-ov-file', label: 'GitHub' }],
+		logo: Assets.AndroidStudio,
+		name: 'Keep the Peach',
+		period: {
+			from: new Date(2022, 1, 15),
+			to: new Date(2022, 3, 1)
+		},
+		skills: getSkills('java', 'androidstudio', 'sqlite'),
+		type: 'Android Application',
+		screenshots: [
+			{
+				label: 'Accueil',
+				src: '/projets/ktp1.png'
+			},
+			{
+				label: 'Séances',
+				src: '/projets/ktp2.png'
+			},
+			{
+				label: 'Séances',
+				src: '/projets/ktp3.png'
+			}
+		]
+	},
+
+	{
+		slug: 'penndu-tkinter',
+		color: '#e7e7e5',
+		description:
+			'Jeu de pendu en Tkinter : un jeu de pendu simple et amusant, développé avec Tkinter pour une interface graphique.',
+		shortDescription:
+			'Jeu de pendu en Tkinter',
+		links: [{ to: 'https://github.com/clement-ghn/Jeu_du_pendu_python', label: 'GitHub' }],
+		logo: Assets.TKinter,
+		name: 'Jeu de pendu',
+		period: {
+			from: new Date(2020, 9, 15),
+			to: new Date(2022, 3, 1)
+		},
+		skills: getSkills('python', 'tkinter'),
+		type: 'Game',
+		screenshots: [
+			{
+				label: 'Accueil',
+				src: '/projets/pendu1.png'
+			},
+			{
+				label: 'Début de la partie',
+				src: '/projets/pendu2.png'
+			},
+			{
+				label: 'Jeu en cours',
+				src: '/projets/pendu3.png'
+			},
+			{
+				label: 'Fin de la partie',
+				src: '/projets/pendu4.png'
+			}
+		]
+	},
+
+	{
+		slug: 'jeu-vr',
+		color: '#9c9392',
+		description:
+			'Jeu de cache-cache en VR avec Unity : un jeu immersif de cache-cache en réalité virtuelle, développé avec Unity pour une expérience de jeu captivante.',
+		shortDescription:
+			'Jeu de cache-cache en VR avec Unity.',
+		links: [{ to: 'https://github.com/BastianRapine/projet_VR', label: 'GitHub' }],
+		logo: Assets.Unity,
+		name: 'Jeu en VR',
+		period: {
+			from: new Date(2022, 0, 15),
+			to: new Date(2022, 3, 1)
+		},
+		skills: getSkills('unity', 'C#', 'VR'),
+		type: 'Game',
+		screenshots: []
+	},
+
+	{
+		slug: 'api-meteo',
+		color: '#57bec9',
+		description:
+			'API météo : une API météo simple et efficace utilisant les services de OpenWeatherMap, développée avec Spring pour fournir des données météorologiques en temps réel.',
+		shortDescription:
+			'API météo',
+		links: [],//{ to: 'https://github.com/BastianRapine/projet_VR', label: 'GitHub' }],
+		logo: Assets.Spring,
+		name: 'API météo',
+		period: {
+			from: new Date(2024, 10, 15),
+			to: new Date(2025, 0, 10)
+		},
+		skills: getSkills('spring', 'java', 'angular'),
+		type: 'API',
+		screenshots: [
+			{
+				label: 'API météo',
+				src: '/projets/meteo.png'
+			}
+		]
+	},
+
+	{
+		slug: 'parta-jardin',
+		color: '#078005',
+		description:
+			'Ce projet est un site qui va permettre à des personnes de partager leur jardin et les produits de celui ci avec les étudiants. Cela à pour but de rapprocher les deux générations, de réduire l\'isolement ainsi que de favoriser la nutrition des étudiants en situation précaire à moindre coût',
+		shortDescription:
+			'Réseau social pour partager les produits de son jardin',
+		links: [{ to: 'https://github.com/Spl4shh/Parta-Jardin', label: 'GitHub' }],
+		logo: Assets.Flask,
+		name: 'Parta\'Jardin',
+		period: {
+			from: new Date(2022, 10, 15),
+			to: new Date(2023, 0, 10)
+		},
+		skills: getSkills('sqlite', 'flask', 'python', 'html', 'css', 'js'),
+		type: 'Website Template',
+		screenshots: []
 	}
 ];
 

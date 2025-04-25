@@ -91,6 +91,7 @@ const Assets = {
 	GestiondeProjet: a('gdp.svg'),
 	Royan: a('royan.png'),
 	Tereva: a('logo_tereva.png'),
+	Git: a('git.png'),
 };
 
 export default Assets;

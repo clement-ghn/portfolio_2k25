@@ -25,7 +25,12 @@
 >
 	<div class="md:flex-1 gap-10px">
 
-		##Add photo here
+		<!-- svelte-ignore a11y-img-redundant-alt -->
+		<img 
+		src="/photo.png" 
+		alt="Profile Photo" 
+		class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0 mb-4"
+			/>
 
 		<MainTitle classes="md:text-left ">{lastName} {name},</MainTitle>
 		<p class="text-[var(--tertiary-text)]  text-center md:text-left text-[1.2em] font-extralight">

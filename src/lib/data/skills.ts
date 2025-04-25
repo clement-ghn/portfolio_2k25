@@ -159,7 +159,7 @@ export const items = [
 		slug: 'git',
 		color: 'orange',
 		description: '',
-		logo: Assets.Unknown,
+		logo: Assets.Git,
 		name: 'Git',
 		category: 'devtools'
 	}),
@@ -267,6 +267,15 @@ export const items = [
 		logo: Assets.Matlab,
 		name: 'Matlab',
 		category: 'pro-lang'
+	}),
+
+	defineSkill({
+		slug: 'spring',
+		color: 'green',
+		description: '',
+		logo: Assets.Spring,
+		name: 'Spring',
+		category: 'framework'
 	}),
 
 ] as const;
