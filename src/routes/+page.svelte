@@ -8,6 +8,8 @@
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
 	import { getPlatfromIcon } from '$lib/utils';
+	import { base } from '$app/paths';
+
 
 	const isEmail = (email: string): boolean => {
 		const reg =
@@ -27,7 +29,7 @@
 
 		<!-- svelte-ignore a11y-img-redundant-alt -->
 		<img 
-		src="/photo.png" 
+		src="{base}/photo.png" 
 		alt="Profile Photo" 
 		class="w-32 h-32 rounded-full object-cover mx-auto md:mx-0 mb-4"
 			/>
