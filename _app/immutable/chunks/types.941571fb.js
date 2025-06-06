@@ -1,1 +1,0 @@
-var i=(e=>(e.GitHub="github",e.Twitter="twitter",e.Linkedin="linkedin",e.Email="email",e.Instagram="instagram",e))(i||{}),n=(e=>(e.FullTime="Full-time",e.PartTime="Part-time",e.SelfEmployed="Self-employed",e.Freelance="Freelance",e.Contract="Contract",e.Internship="Stage",e.Alternance="Alternance",e))(n||{});export{n as C,i as P};
