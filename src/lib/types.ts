@@ -6,6 +6,7 @@ export enum Platform {
 	Linkedin = 'linkedin',
 	Email = 'email',
 	Instagram = 'instagram',
+	Strava = "Strava",
 }
 
 export type Icon = `i-${string}-${string}`;

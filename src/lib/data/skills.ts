@@ -278,6 +278,30 @@ export const items = [
 		category: 'framework'
 	}),
 
+	defineSkill({
+		slug: 'velo',
+		color: 'black',
+		description: '',
+		logo: Assets.Velo,
+		name: 'Velo',
+	}),
+
+	defineSkill({
+		slug: 'cap',
+		color: 'black',
+		description: '',
+		logo: Assets.Course,
+		name: 'Course à Pied',
+	}),
+
+	defineSkill({
+		slug: 'natation',
+		color: 'black',
+		description: '',
+		logo: Assets.Natation,
+		name: 'Natation',
+	}),
+
 ] as const;
 
 export const title = 'Skills';

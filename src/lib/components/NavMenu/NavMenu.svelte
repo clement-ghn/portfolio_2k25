@@ -23,10 +23,10 @@
 <div class="nav-menu">
 	<nav class="container flex flex-row items-center text-sm">
 		<a
-			href={`${base}/`}
+			href={`${theme ? `${base}/` : `${base}/ironman/`}`}
 			class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"
 		>
-			<UIcon icon="i-carbon-code" classes="text-2em" />
+			<UIcon 	icon={$theme ? 'i-carbon-code' : 'i-carbon-bicycle'} classes="text-2em" />
 			<span
 				class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis"
 				>{HOME.name} {HOME.lastName}
@@ -59,9 +59,9 @@
 					on:click={() => toggleTheme()}
 				>
 					{#if $theme}
-						<UIcon icon="i-carbon-moon" />
+						<UIcon icon="i-carbon-portfolio" />
 					{:else}
-						<UIcon icon="i-carbon-sun" />
+						<UIcon icon="i-carbon-trophy" />
 					{/if}
 				</button>
 			</div>

@@ -92,6 +92,10 @@ const Assets = {
 	Royan: a('royan.png'),
 	Tereva: a('logo_tereva.png'),
 	Git: a('git.png'),
+	Strava: a('strava.png'),
+	Natation: a('natation.png'),
+	Velo: a('velo.png'),
+	Course: a('course.png'),
 };
 
 export default Assets;

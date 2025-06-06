@@ -1,5 +1,6 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
+import { goto } from '$app/navigation';
 
 const key = '@riadh-adrani-theme';
 
@@ -18,6 +19,14 @@ export const toggleTheme = (value?: boolean) =>
 		updateLocalStorage($v);
 
 		document.querySelector(':root')?.setAttribute('data-theme', $v ? 'dark' : 'light');
+
+		if (browser) {
+			if ($v) {
+				goto('/'); // Portfolio
+			} else {
+				goto('/ironman'); // Ironman journey
+			}
+		}
 
 		return $v;
 	});

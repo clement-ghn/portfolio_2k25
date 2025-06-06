@@ -3,9 +3,9 @@
 	import { data, title } from '@data/resume';
 	import Chip from '$lib/components/Chip/Chip.svelte';
 	import CommonPage from '$lib/components/CommonPage.svelte';
-  </script>
-  
-  <CommonPage {title}>
+</script>
+
+<CommonPage {title}>
 	<div class="resume">
 	  {#if data}
 		<!-- Use $app/paths.base to correctly reference the file path in production -->
@@ -16,17 +16,17 @@
 		<Chip>Ooops! Pas encore de CV.</Chip>
 	  {/if}
 	</div>
-  </CommonPage>
-  
-  <footer class="text-center text-sm text-[var(--tertiary-text)] mt-10 p-4">
+</CommonPage>
+
+<footer class="text-center text-sm text-[var(--tertiary-text)] mt-10 p-4">
 	<p>
 	  Template par <a href="https://github.com/RiadhAdrani" target="_blank" rel="noreferrer" class="text-[var(--accent-text)] underline">
 		Riadh Adrani
 	  </a>
 	</p>
-  </footer>
-  
-  <style lang="scss">
+</footer>
+
+<style lang="scss">
 	.resume {
 	  display: flex;
 	  justify-content: center;
@@ -36,5 +36,4 @@
 		color: inherit;
 	  }
 	}
-  </style>
-  
+</style>
