@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { theme, toggleTheme } from '$lib/stores/theme';
-	import { items } from '@data/navbar';
+	import { defaultItems, ironmanItems } from '@data/navbar';
 	import * as HOME from '@data/home';
 
 	import { base } from '$app/paths';
@@ -10,6 +10,8 @@
 	$: currentRoute = $page.url.pathname;
 
 	let expanded = false;
+	$: items = $theme ? defaultItems : ironmanItems;
+
 
 	const toggleExpanded = (v?: boolean) => {
 		if (typeof v === 'undefined') {
