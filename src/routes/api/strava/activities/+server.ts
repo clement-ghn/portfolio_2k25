@@ -1,27 +1,37 @@
+import { env } from '$env/dynamic/private';
 import { json } from '@sveltejs/kit';
 
-const access_token = 'a4a1ec17f4edf9f69caef9b34efe2390ae2b3bee';
+const access_token = env.STRAVA_ACCESS_TOKEN;
 
-const afterDate = new Date(Date.UTC(2024, 8, 1));   // 1er septembre 2024 (mois 8 = septembre)
-const beforeDate = new Date(Date.UTC(2025, 5, 1));  // 1er juin 2025 (mois 5 = juin)
+const afterDate = new Date(Date.UTC(2024, 8, 1));   // 1er septembre 2024
+const beforeDate = new Date(Date.UTC(2025, 5, 1));  // 1er juin 2025
 
-// Convertir en timestamps UNIX en secondes
 const after = Math.floor(afterDate.getTime() / 1000);
 const before = Math.floor(beforeDate.getTime() / 1000);
 
 export async function GET() {
-	const url = `https://www.strava.com/api/v3/athlete/activities?per_page=50&after=${after}&before=${before}`;
+	const perPage = 200;
+	let page = 1;
+	let allActivities = [];
+	let fetched = [];
 
-	const res = await fetch(url, {
-		headers: {
-			Authorization: `Bearer ${access_token}`
+	do {
+		const url = `https://www.strava.com/api/v3/athlete/activities?per_page=${perPage}&page=${page}&after=${after}&before=${before}`;
+
+		const res = await fetch(url, {
+			headers: {
+				Authorization: `Bearer ${access_token}`
+			}
+		});
+
+		if (!res.ok) {
+			return json({ error: true, status: res.status }, { status: res.status });
 		}
-	});
 
-	if (!res.ok) {
-		return json({ error: true, status: res.status }, { status: res.status });
-	}
+		fetched = await res.json();
+		allActivities.push(...fetched);
+		page++;
+	} while (fetched.length === perPage); // continue tant que Strava envoie une page complète
 
-	const data = await res.json();
-	return json(data);
+	return json(allActivities);
 }
