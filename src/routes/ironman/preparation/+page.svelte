@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Counter from '$lib/components/Counter/Counter.svelte';
+	import ActivityMap from '$lib/components/Map/Map.svelte'; 
 
 	let activities: any[] = [];
 	let stats: Record<string, { distance: number; time: number }> = {};
@@ -11,7 +12,7 @@
 		Run: 'Course à pied',
 		Ride: 'Vélo',
 		Swim: 'Natation',
-		};
+	};
 
 	function traduireType(type: string): string {
 		return typeTraduit[type as SportType] ?? type;
@@ -30,8 +31,14 @@
 		switch (type) {
 			case 'Run': {
 				const totalSecondsPerKm = 1000 / avg_speed;
-				const min = Math.floor(totalSecondsPerKm / 60);
-				const sec = Math.round(totalSecondsPerKm % 60);
+				let min = Math.floor(totalSecondsPerKm / 60);
+				let sec = Math.round(totalSecondsPerKm % 60);
+
+				if (sec === 60) {
+				min += 1;
+				sec = 0;
+				}
+
 				return `${min}:${sec < 10 ? '0' : ''}${sec} min/km`;
 			}
 			case 'Ride': {
@@ -51,25 +58,25 @@
 	}
 
 	onMount(async () => {
-	const res = await fetch('/api/strava/activities');
-	activities = await res.json();
+		const res = await fetch('/api/strava/activities');
+		activities = await res.json();
 
-	stats = {};
+		stats = {};
 
-	for (const act of activities) {
-		let type = act.type;
+		for (const act of activities) {
+			let type = act.type;
 
-		// Ignorer Transition et WeightTraining
-		if (type === 'Workout' || type === 'WeightTraining') continue;
+			// Ignorer Transition et WeightTraining
+			if (type === 'Workout' || type === 'WeightTraining') continue;
 
-		// Fusionner VirtualRide avec Ride
-		if (type === 'VirtualRide') type = 'Ride';
+			// Fusionner VirtualRide avec Ride
+			if (type === 'VirtualRide') type = 'Ride';
 
-		if (!stats[type]) stats[type] = { distance: 0, time: 0 };
-		stats[type].distance += act.distance;
-		stats[type].time += act.elapsed_time;
-	}
-});
+			if (!stats[type]) stats[type] = { distance: 0, time: 0 };
+			stats[type].distance += act.distance;
+			stats[type].time += act.elapsed_time;
+		}
+	});
 </script>
 
 <h1 class="text-2xl font-bold mb-6 text-center">Ma prépa</h1>
@@ -90,24 +97,29 @@
 {/if}
 
 {#if activities.length > 0}
-	<ul class="space-y-4">
+	<ul class="space-y-4 list-none">
 		{#each activities as act}
 			<li class="bg-gray-100 p-4 rounded-xl shadow">
-				<p class="text-lg font-semibold">{act.name}</p>
-				<p>📏 {(act.distance / 1000).toFixed(2)} km</p>
-				<p>📅 {new Date(act.start_date).toLocaleDateString()} — {traduireType(act.type)}</p>
-				<p>⏱️ Temps total : {formatDuration(act.elapsed_time)}</p>
-				<p>⏱️ {formatVitesse(act.type, act.average_speed)}</p>
+				<div class="flex flex-col md:flex-row items-start">
 
-				{#if act.map?.summary_polyline}
-					<img
-						class="rounded mt-2"
-						src={`https://maps.googleapis.com/maps/api/staticmap?size=600x200&path=enc:${act.map.summary_polyline}&key=VOTRE_CLE_API`}
-						alt="Carte de l'activité"
-					/>
-				{:else}
-					<p class="text-sm text-gray-500">Pas de carte disponible</p>
-				{/if}
+					<!-- Infos à gauche -->
+					<div class="flex-2/3 md:w-2/3 space-y-2">
+						<p class="text-lg font-semibold">{act.name}</p>
+						<p>📏 {(act.distance / 1000).toFixed(2)} km</p>
+						<p>📅 {new Date(act.start_date).toLocaleDateString()} — {traduireType(act.type)}</p>
+						<p>⏱️ Temps total : {formatDuration(act.elapsed_time)}</p>
+						<p>⏱️ {formatVitesse(act.type, act.average_speed)}</p>
+					</div>
+
+					<!-- Carte à droite -->
+					{#if act.map?.summary_polyline}
+						<div class="w-full md:w-1/3 min-w-[200px]">
+							<ActivityMap encodedPolyline={act.map.summary_polyline} />
+						</div>
+					{:else}
+						<p class="text-sm text-gray-500">Pas de carte disponible</p>
+					{/if}
+				</div>
 			</li>
 		{/each}
 	</ul>
